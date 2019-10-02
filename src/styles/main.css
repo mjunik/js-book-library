@@ -1,0 +1,45 @@
+.content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h2.book-title {
+    margin-bottom: 25px;
+}
+
+.book-details-wrapper {
+    display: flex;
+}
+
+.book-details-wrapper .book-cover {
+    margin-right: 20px;
+    flex: 0 0 180px;
+}
+
+/*main .book-cover {*/
+/*    float: left;*/
+/*    margin: 0 20px 20px 0;*/
+/*}*/
+
+main p {
+    margin: 10px 0;
+}
+
+main .subject {
+    display: inline-block;
+    background: #eee;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 0 17px;
+}
+
+.error-title {
+    line-height: 1.5em;
+}

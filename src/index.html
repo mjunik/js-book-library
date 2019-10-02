@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="JS app for teaching purposes: MVC, Observer pattern, ES6 modules">
+    <meta name="author" content="Monika Junik">
+    <title>JS Book Library</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <h1 class="page-title">Book library</h1>
+        <p class="page-subtitle">Powered by <a href="https://openlibrary.org/developers/api" target="_blank">Open Library</a></p>
+        <div class="search-engine">
+            <div class="spinner" id="jsSpinner">
+                <input type="search" id="jsSearchInput" class="search-box" placeholder="Search for a book..."
+                       title="Search"/>
+            </div>
+            <ul id="jsSearchResults" class="search-results">
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <main id="jsBookDetails">
+    </main>
+    <aside>
+        <div class="last-search">
+            <h3 class="aside-title">Last search</h3>
+            <div id="jsLastSearch">
+                <div class="last-search-item no-results">No search results yet!</div>
+            </div>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

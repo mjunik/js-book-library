@@ -1,0 +1,83 @@
+header {
+    background-color: var(--main-pink);
+    text-align: center;
+    padding: 50px;
+}
+
+.header-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.page-title {
+    text-transform: uppercase;
+}
+
+.page-subtitle {
+    font-style: italic;
+    margin: 10px 0 35px;
+}
+
+.page-subtitle a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.search-engine {
+    position: relative;
+}
+
+.spinner {
+    position: relative;
+}
+.spinner.show::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 17px;
+    z-index: 10;
+    content: url("../images/spinner.gif");
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    border: var(--basic-border);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.search-box::placeholder {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.search-results {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+}
+
+.search-results li {
+    border: var(--basic-border);
+    border-top: 0;
+    padding: 15px 10px;
+}
+
+.search-results li:hover:not(.no-results) {
+    background-color: var(--light-gray);
+    cursor: pointer;
+}
+
+.search-results li span.author {
+    font-size: 0.7em;
+    margin-left: 15px;
+}
+
+.search-results li span.highlighted {
+    background: var(--main-pink);
+}
