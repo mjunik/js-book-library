@@ -7,15 +7,19 @@ function displayBookDetails() {
     appController.displayBookDetails(id);
 }
 
-const updateLastSearch = book => {
-    lastSearchModel.addBookToList(book);
+const updateLastSearch = book => lastSearchModel.addBookToList(book);
 
-    const lastSearchBooks = lastSearchModel.getLastSearchBooks();
-
-    lastSearchView.displayLastSearch(lastSearchBooks);
+const displayLastSearch = lastSearchData => {
+    lastSearchView.displayLastSearch(lastSearchData);
 
     const lastSearchItems = document.querySelectorAll('.last-search-item');
-    lastSearchItems.forEach(item => item.addEventListener('click', displayBookDetails));
+    lastSearchItems.forEach(item =>
+        item.addEventListener('click', displayBookDetails));
 };
 
-export {updateLastSearch}
+const setLastSearchFromLocalStorage = () =>
+    lastSearchModel.setLastSearchFromLocalStorage();
+
+lastSearchModel.lastSearchObserver.subscribe(displayLastSearch);
+
+export {updateLastSearch, setLastSearchFromLocalStorage}

@@ -12,5 +12,6 @@ const updateLastSearchList = book =>
 
 searchController.initSearch();
 
+lastSearchController.setLastSearchFromLocalStorage();
 
 export {displayBookDetails, updateLastSearchList}
